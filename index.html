@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata: This tells the browser important information about the page. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTGP-64 Official Site</title>
-    <!-- Favicon link (kept from your current page) -->
+    <!-- Favicon: The small icon that appears in the browser tab. -->
     <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/mythicalfew/ctgp64site/refs/heads/main/CTGP64%20copy-cropped.svg">
+    <!-- Tailwind CSS: This is a styling framework that uses utility classes to quickly build designs. We're loading it from a CDN (Content Delivery Network). -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* This imports the 'Inter' font from Google Fonts. */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Custom CSS for accordion behavior */
+        /* Custom CSS for accordion behavior. */
+        /* The `max-height: 0` and `overflow: hidden` properties hide the content initially. */
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
+            transition: max-height 0.3s ease-out; /* This creates a smooth animation when the accordion opens/closes. */
         }
+        /* The `open` class is added by the JavaScript when the button is clicked, revealing the content. */
         .accordion-content.open {
-            max-height: 500px; /* Adjust this value as needed for content */
+            max-height: 500px; /* This value should be large enough to contain all your content. */
             transition: max-height 0.5s ease-in;
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header & Navigation -->
+    <!-- Header Section: This contains the main navigation for the site. -->
     <header class="bg-indigo-700 text-white p-4">
+        <!-- The `container mx-auto` classes center the content. `flex justify-between items-center` helps with alignment. -->
         <nav class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold">CTGP-64</a>
+            <!-- Website Logo: Clicking this takes you to the top of the page. -->
+            <a href="#" class="text-2xl font-bold">
+                <img src="https://raw.githubusercontent.com/mythicalfew/ctgp64site/refs/heads/main/CTGP64%20copy.png" alt="CTGP-64 Logo" class="h-8">
+            </a>
+            <!-- Navigation Links: The `hidden md:flex` classes hide the links on small screens and show them on medium screens and up. -->
             <div class="space-x-4 hidden md:flex">
                 <a href="#about" class="hover:text-indigo-200 transition">About</a>
                 <a href="#about-me" class="hover:text-indigo-200 transition">About Me</a>
@@ -39,15 +49,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <!-- 
-        I've replaced the solid color with a background image.
-        The `style` attribute uses a `linear-gradient` overlay to make the image
-        semi-transparent and keep the text readable. You can adjust the opacity
-        by changing the last value (e.g., `0.5`).
-        
-        Remember to replace the placeholder image URL with your own image when you're ready!
-    -->
+    <!-- Hero Section: The main, prominent section at the top of the page. -->
     <section class="text-white py-20 px-4 text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://upload.wikimedia.org/wikipedia/commons/4/41/Cat_2016-04-20_17.56.09_%2831411516086%29.jpg'); background-size: cover; background-position: center;">
         <div class="container mx-auto">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">
@@ -62,10 +64,14 @@
         </div>
     </section>
 
-    <!-- About CTGP-64 Section -->
+    <!-- About CTGP-64 Section: A section for explaining the project. -->
     <section id="about" class="py-16 px-4 bg-white">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl font-bold text-center mb-10">About CTGP-64</h2>
+            <!-- This is the new image you requested, centered below the heading. -->
+            <div class="flex justify-center my-8">
+                <img src="https://raw.githubusercontent.com/mythicalfew/ctgp64site/refs/heads/main/CTGP64%20copy-cropped.svg" alt="CTGP-64 Icon" class="w-48 h-48">
+            </div>
             <div class="prose max-w-none">
                 <p>
                     [IN PROGRESS: Write a short, compelling paragraph about what CTGP-64 is. Explain its purpose, key features like new tracks and quality-of-life improvements, and why it was created. This is your chance to hook new players!]
@@ -77,12 +83,12 @@
         </div>
     </section>
 
-    <!-- About Me Section -->
+    <!-- About Me Section: A section for a personal introduction. -->
     <section id="about-me" class="py-16 px-4 bg-gray-50">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl font-bold text-center mb-10">About Me</h2>
             <div class="flex justify-center mb-6">
-                <img src="https://raw.githubusercontent.com/mythicalfew/ctgp64site/refs/heads/main/CTGP64%20copy-cropped.svg" alt="A placeholder for a personal image" class="w-48 h-48 rounded-full shadow-lg">
+                <img src="https://raw.githubusercontent.com/mythicalfew/ctgp64site/refs/heads/main/9Rwp6qLz_400x400.jpg" alt="A placeholder for a personal image" class="w-48 h-48 rounded-full shadow-lg">
             </div>
             <div class="prose max-w-none text-center">
                 <p>
@@ -92,19 +98,22 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section: A section with expandable answers to common questions. -->
     <section id="faq" class="py-16 px-4 bg-gray-100">
         <div class="container mx-auto max-w-3xl">
             <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
             
             <!-- FAQ Item 1 -->
             <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+                <!-- `accordion-header` is the button that a user clicks. -->
                 <button class="accordion-header w-full flex justify-between items-center p-6 font-semibold text-left focus:outline-none transition-colors duration-300 hover:bg-gray-50">
                     <span>[IN PROGRESS: What is CTGP-64 and how do I get started?]</span>
+                    <!-- This SVG icon acts as an arrow that rotates when clicked. -->
                     <svg class="w-5 h-5 transform transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
                 </button>
+                <!-- `accordion-content` is the hidden section that appears when the button is clicked. -->
                 <div class="accordion-content p-6 text-gray-600">
                     <p>[IN PROGRESS: Write a detailed answer here. Describe the core concept of the mod and provide a step-by-step guide on how to download and install it. Include any prerequisites or troubleshooting tips.]</p>
                 </div>
@@ -139,53 +148,54 @@
         </div>
     </section>
 
-    <!-- Social Links Footer -->
+    <!-- Social Links Footer: The bottom section of the page with links to social media. -->
     <footer id="social" class="bg-gray-800 text-white py-12 px-4 text-center">
         <div class="container mx-auto">
             <h3 class="text-2xl font-bold mb-4">Connect with the Community</h3>
             <div class="flex justify-center space-x-6">
+                <!-- Each link uses an `img` tag to display the correct social media icon. -->
                 <!-- YouTube Link -->
                 <a href="[IN PROGRESS: YOUR YOUTUBE CHANNEL LINK]" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors duration-300">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M21.98 6.13c-.2-.79-.92-1.37-1.84-1.37-2.31-.13-4.63-.2-6.94-.2H9.79c-2.31 0-4.63.07-6.94.2-.92 0-1.64.58-1.84 1.37C0 9.24 0 12 0 12s0 2.76.01 5.87c.2.79.92 1.37 1.84 1.37C4.16 19.24 6.48 19.31 8.8 19.31h4.41c2.31 0 4.63-.07 6.94-.2.92 0 1.64-.58 1.84-1.37C22 14.76 22 12 22 12s0-2.76-.02-5.87zM9.47 15.02V8.98L15.34 12l-5.87 3.02z" />
-                    </svg>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube Icon" class="w-10 h-10">
                 </a>
                 
-                <!-- Twitter/X Link -->
+                <!-- Twitter Link -->
                 <a href="[IN PROGRESS: YOUR TWITTER/X LINK]" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M18.244 2.25h3.308l-7.227 8.261 8.502 11.239h-6.68l-5.694-7.093-4.743 7.093h-3.308l7.66-8.736L1.517 2.25h6.68l4.09 5.89L18.244 2.25zm-2.887 19.083H15.42L5.808 3.125h1.91L16.216 21.333z" />
-                    </svg>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter Logo" class="w-10 h-10">
                 </a>
 
                 <!-- Discord Link -->
                 <a href="[IN PROGRESS: YOUR DISCORD SERVER LINK]" target="_blank" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M19.78 2.05A.89.89 0 0 0 19 1.16a15.7 15.7 0 0 0-4.7.7A15.44 15.44 0 0 0 9.38 1.85a.95.95 0 0 0-.74.19c-3.1 1.77-5.55 4.31-6.9 7.42-.72 1.68-.76 3.4.11 4.79.46.73 1.13 1.3 1.94 1.7.53.25 1.08.43 1.66.5.15.02.2-.03.22-.16l.24-1.25c-.2-.06-.4-.14-.6-.24-.59-.28-1.12-.66-1.55-1.16a7.48 7.48 0 0 1-.95-1.18c.25-.1.52-.2.78-.31.8-.35 1.68-.6 2.59-.72.09 0 .15-.06.2-.14.1-.19.2-.38.3-.57l.13-.26c.26-.52.54-.92.85-1.24a5.55 5.55 0 0 1 2.24-.95 5.48 5.48 0 0 1 2.37.95c.32.32.6.72.85 1.24l.13.26c.1.19.2.38.3.57.06.08.12.14.2.14.9.12 1.77.37 2.58.7.27.11.53.21.78.31a7.48 7.48 0 0 1-1 1.18c-.43.5-.96.88-1.55 1.16-.2.1-.4.18-.6.24l.24 1.25c.02.13.07.18.22.16.58-.07 1.13-.25 1.66-.5.8-.4 1.48-1 1.94-1.7.87-1.39.83-3.11.11-4.79C21.32 6.36 20.35 3.86 19.78 2.05zm-6.22 8.52a2.22 2.22 0 0 1-4.44 0c0-1.23.99-2.22 2.22-2.22s2.22.99 2.22 2.22zm1.61 5.86c-.05.07-.11.12-.19.16-.47.23-1.03.35-1.63.35-.6 0-1.16-.12-1.63-.35-.08-.04-.14-.09-.19-.16-.09-.15-.17-.32-.24-.5-.14-.34-.24-.71-.3-1.1a1.27 1.27 0 0 1 .1-.73c.09-.15.22-.24.36-.31.14-.07.3-.1.45-.09.34.02.66.17.91.43a2.33 2.33 0 0 1 1.63 0c.25-.26.57-.41.9-.43.15-.01.31.02.45.09.14.07.27.16.36.31a1.27 1.27 0 0 1 .1.73c-.06.39-.16.76-.3 1.1-.07.18-.15.35-.24.5zm-5.78 0c-.05.07-.11.12-.19.16-.47.23-1.03.35-1.63.35-.6 0-1.16-.12-1.63-.35-.08-.04-.14-.09-.19-.16-.09-.15-.17-.32-.24-.5-.14-.34-.24-.71-.3-1.1a1.27 1.27 0 0 1 .1-.73c.09-.15.22-.24.36-.31.14-.07.3-.1.45-.09.34.02.66.17.91.43a2.33 2.33 0 0 1 1.63 0c.25-.26.57-.41.9-.43.15-.01.31.02.45.09.14.07.27.16.36.31a1.27 1.27 0 0 1 .1.73c-.06.39-.16.76-.3 1.1-.07.18-.15.35-.24.5z" />
-                    </svg>
+                    <img src="https://static.wikia.nocookie.net/logopedia/images/4/41/Discord_Inverted_Icon.svg/revision/latest?cb=20170926051023&format=original" alt="Discord Logo" class="w-10 h-10">
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Accordion functionality -->
+    <!-- JavaScript: This script adds interactivity to the FAQ section. -->
     <script>
+        // This makes sure the code runs only after the entire page has loaded.
         document.addEventListener('DOMContentLoaded', () => {
+            // Selects all buttons with the class `accordion-header`.
             const accordionHeaders = document.querySelectorAll('.accordion-header');
 
+            // Loop through each header button.
             accordionHeaders.forEach(header => {
+                // Add a click event listener to each button.
                 header.addEventListener('click', () => {
+                    // Find the content section right after the clicked button.
                     const content = header.nextElementSibling;
+                    // Find the SVG icon inside the button.
                     const svg = header.querySelector('svg');
 
-                    // Toggle the content
+                    // Toggle the `open` class on the content section. This reveals or hides it.
                     content.classList.toggle('open');
                     
-                    // Rotate the arrow icon
+                    // Rotate the arrow icon to indicate whether the section is open or closed.
                     if (content.classList.contains('open')) {
-                        svg.style.transform = 'rotate(180deg)';
+                        svg.style.transform = 'rotate(180deg)'; // Rotates the arrow up when open.
                     } else {
-                        svg.style.transform = 'rotate(0deg)';
+                        svg.style.transform = 'rotate(0deg)'; // Rotates the arrow back down when closed.
                     }
                 });
             });
