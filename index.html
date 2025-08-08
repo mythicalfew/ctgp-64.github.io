@@ -5,36 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTGP-64 - Mario Kart 64 Mod Pack</title>
-        <!-- SEO: Meta description for search engine results. -->
+    <!-- SEO: Meta description for search engine results. -->
     <meta name="description" content="Explore CTGP-64, a custom unofficial mod for Mario Kart 64, featuring over 20 new tracks and quality-of-life upgrades.">
     <!-- SEO: Keywords to help search engines understand the page content. -->
     <meta name="keywords" content="CTGP-64, Mario Kart 64, MK64, custom tracks, mod, custom grand prix, Nintendo 64, N64, mythicalfew">
     <!-- Favicon: The small icon that appears in the browser tab. -->
     <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/mythicalfew/ctgp64site/refs/heads/main/ctgpicon.svg">
+    
+    <!-- Open Graph (OG) Meta Tags for Social Media Sharing (e.g., Facebook, LinkedIn) -->
+    <meta property="og:title" content="CTGP-64 - Mario Kart 64 Mod Pack">
+    <meta property="og:description" content="Explore CTGP-64, a custom unofficial mod for Mario Kart 64, featuring over 20 new tracks and quality-of-life upgrades.">
+    <meta property="og:url" content="https://mythicalfew.github.io/ctgp64site/"> <!-- Replace with your actual website URL -->
+    <meta property="og:image" content="https://github.com/mythicalfew/ctgp64site/raw/refs/heads/main/CTGP.svg">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags for Twitter Sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CTGP-64 - Mario Kart 64 Mod Pack">
+    <meta name="twitter:description" content="Explore CTGP-64, a custom unofficial mod for Mario Kart 64, featuring over 20 new tracks and quality-of-life upgrades.">
+    <meta name="twitter:image" content="https://github.com/mythicalfew/ctgp64site/raw/refs/heads/main/CTGP.svg">
+
     <!-- Tailwind CSS: This is a styling framework that uses utility classes to quickly build designs. We're loading it from a CDN (Content Delivery Network). -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* This imports the 'Inter' font from Google Fonts. */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Custom CSS for accordion behavior. */
-        /* The `max-height: 0` and `overflow: hidden` properties hide the content initially. */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out; /* This creates a smooth animation when the accordion opens/closes. */
-        }
-        /* The `open` class is added by the JavaScript when the button is clicked, revealing the content. */
-        .accordion-content.open {
-            max-height: 500px; /* This value should be large enough to contain all your content. */
-            transition: max-height 0.5s ease-in;
-        }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-       /* This imports the 'Inter' font from Google Fonts. */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
@@ -84,6 +78,21 @@
           }
         }
       ]
+    }
+    </script>
+    
+    <!-- SEO: JSON-LD Structured Data for Website. This helps search engines understand the website as a whole. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CTGP-64 - Mario Kart 64 Mod Pack",
+      "url": "https://mythicalfew.github.io/ctgp64site/", <!-- Replace with your actual website URL -->
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://mythicalfew.github.io/ctgp64site/?q={search_term_string}", <!-- Replace with your actual search URL -->
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 </head>
