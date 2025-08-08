@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTGP-64 - Mario Kart 64 Mod Pack</title>
+        <!-- SEO: Meta description for search engine results. -->
+    <meta name="description" content="Explore CTGP-64, a custom unofficial mod for Mario Kart 64, featuring over 20 new tracks and quality-of-life upgrades.">
+    <!-- SEO: Keywords to help search engines understand the page content. -->
+    <meta name="keywords" content="CTGP-64, Mario Kart 64, MK64, custom tracks, mod, custom grand prix, Nintendo 64, N64, mythicalfew">
     <!-- Favicon: The small icon that appears in the browser tab. -->
     <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/mythicalfew/ctgp64site/refs/heads/main/ctgpicon.svg">
     <!-- Tailwind CSS: This is a styling framework that uses utility classes to quickly build designs. We're loading it from a CDN (Content Delivery Network). -->
@@ -28,6 +32,60 @@
             transition: max-height 0.5s ease-in;
         }
     </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+       /* This imports the 'Inter' font from Google Fonts. */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom CSS for accordion behavior. */
+        /* The `max-height: 0` and `overflow: hidden` properties hide the content initially. */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out; /* This creates a smooth animation when the accordion opens/closes. */
+        }
+        /* The `open` class is added by the JavaScript when the button is clicked, revealing the content. */
+        .accordion-content.open {
+            max-height: 500px; /* This value should be large enough to contain all your content. */
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
+
+    <!-- SEO: JSON-LD Structured Data for FAQ. This helps search engines display your FAQs directly in the search results as rich snippets. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I get started with CTGP-64?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CTGP-64 (Custom Grand Prix 64) is a custom, unofficial mod for Mario Kart 64. When released, you will need a legitimate Mario Kart 64 ROM to patch it with. The website will provide a patching utility for this purpose."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CTGP-64 compatible with online play?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The original Nintendo 64 console does not have native internet capabilities. However, emulators can utilize a feature called 'Netplay' to enable online multiplayer. You can find more information about Netplay and how to set it up on the Play64 Netplay plugin page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will you provide a CTGP-64 ROM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, distributing ROMs is illegal. While some unofficial sites may offer pre-patched ROMs, we do not endorse this practice. We recommend using a legitimate copy of Mario Kart 64 that you have dumped yourself."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -74,10 +132,11 @@
             </div>
             <div class="prose max-w-none">
                 <p>
-                    CTGP-64 (short for Custom Grand Prix 64) is a mod and rom hack for the 1996 video game Mario Kart 64 by Nintendo. When complete, it will add 20 new tracks, with new remixes from newer games as well as original tracks created by me
+                    CTGP-64 (Custom Grand Prix 64) is an unofficial custom mod for the classic Nintendo game, Mario Kart 64. When complete, the mod will add over 20 new tracks, including remixes from newer games and original creations.
                 </p>
                 <p>
-                    Inspired by the likes of MK64AU, CTGP-R & CTGP-7, CTGP-64 will feature many quality of life upgrades as well. As of this moment, it is currently in development and no demos/official release is avaliable yet. I'm looking for a 2026 release, however.
+                    Inspired by popular mods like MK64AU, CTGP-R, and CTGP-7, CTGP-64 is designed to bring many quality-of-life upgrades to the game. The project is currently in development with a target release date in 2026. No official demos or releases are available yet.
+                </p>
             </div>
         </div>
     </section>
@@ -106,7 +165,7 @@
             <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
                 <!-- `accordion-header` is the button that a user clicks. -->
                 <button class="accordion-header w-full flex justify-between items-center p-6 font-semibold text-left focus:outline-none transition-colors duration-300 hover:bg-gray-50">
-                    <span>What is CTGP-64 and how do I get started?</span>
+                    <span>How do I get started with CTGP-64?</span>
                     <!-- This SVG icon acts as an arrow that rotates when clicked. -->
                     <svg class="w-5 h-5 transform transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -114,7 +173,7 @@
                 </button>
                 <!-- `accordion-content` is the hidden section that appears when the button is clicked. -->
                 <div class="accordion-content p-6 text-gray-600">
-                    <p>CTGP-64 (Custom Grand Prix 64) is a custom, unofficial mod for Mario Kart 64. When completed, you will need a legit Mario Kart 64 ROM to patch it with.</p>
+                    <p>CTGP-64 (Custom Grand Prix 64) is a custom, unofficial mod for Mario Kart 64. When released, you will need a legitimate Mario Kart 64 ROM to patch it with. The website will provide a patching utility for this purpose.</p>
                 </div>
             </div>
 
@@ -127,20 +186,46 @@
                     </svg>
                 </button>
                 <div class="accordion-content p-6 text-gray-600">
-                    <p>Natively? Unfortunately, no. The Nintendo 64 is a very, very old console and thus doesn't have internet capabilities. Hell, Nintendo consoles didn't start having it until the DS in 2004. Fortunately, there is one thing you can do, and it's called Netplay. TBH I've never tried it out, but i heard it works and it allows people to play online. Try it: https://www.play64.com/netplay-plugin/ </p>
+                    <p>The original Nintendo 64 console does not have native internet capabilities. However, emulators can utilize a feature called "Netplay" to enable online multiplayer. You can find more information about Netplay and how to set it up on the <a href="https://www.play64.com/netplay-plugin/" target="_blank" class="text-indigo-600 hover:text-indigo-800 underline">Play64 Netplay plugin page</a>.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 3 -->
             <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
                 <button class="accordion-header w-full flex justify-between items-center p-6 font-semibold text-left focus:outline-none transition-colors duration-300 hover:bg-gray-50">
-                    <span>Will you provide a CTGP-64 ROM with the custom packs built in?</span>
+                    <span>Will you provide a CTGP-64 ROM?</span>
                     <svg class="w-5 h-5 transform transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
                 </button>
                 <div class="accordion-content p-6 text-gray-600">
-                    <p>Absloutely not. Although you may can find sites offering to provide the full CTGP-64 rom with the tracks already patched in, it is unofficial and is not recommended. Sending ROMs is illegal and i am required by law to not share that. Please use your original MK64 copy that you dumped.</p>
+                    <p>No, distributing ROMs is illegal. While some unofficial sites may offer pre-patched ROMs, we do not endorse this practice. We recommend using a legitimate copy of Mario Kart 64 that you have dumped yourself.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 (New Placeholder) -->
+            <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+                <button class="accordion-header w-full flex justify-between items-center p-6 font-semibold text-left focus:outline-none transition-colors duration-300 hover:bg-gray-50">
+                    <span>[IN PROGRESS: New FAQ question 1?]</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="accordion-content p-6 text-gray-600">
+                    <p>[IN PROGRESS: Answer for new FAQ 1.]</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 (New Placeholder) -->
+            <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+                <button class="accordion-header w-full flex justify-between items-center p-6 font-semibold text-left focus:outline-none transition-colors duration-300 hover:bg-gray-50">
+                    <span>[IN PROGRESS: New FAQ question 2?]</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="accordion-content p-6 text-gray-600">
+                    <p>[IN PROGRESS: Answer for new FAQ 2.]</p>
                 </div>
             </div>
 
@@ -168,6 +253,8 @@
                     <img src="https://raw.githubusercontent.com/mythicalfew/ctgp64site/refs/heads/main/discord.svg" alt="Discord Logo" class="w-10 h-10">
                 </a>
             </div>
+             <!-- Copyright text added to the bottom of the footer. -->
+            <p class="text-gray-400 mt-8 text-sm">Copyright &copy; 1996-2025 Nintendo LLC, mythicalfew</p>
         </div>
     </footer>
 
